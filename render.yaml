@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: cryptojurnal
+    env: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    disk:
+      name: appsmith-data
+      mountPath: /appsmith-stacks
+      sizeGB: 10
+    envVars:
+      - key: APPSMITH_ADMIN_EMAILS
+        value: "poijo5451@gmail.com"
+      - key: APPSMITH_SIGNUP_DISABLED
+        value: "true"
+      - key: APPSMITH_FORM_LOGIN_DISABLED
+        value: "true"
+      - key: APPSMITH_EMAIL_ENABLED
+        value: "true"
