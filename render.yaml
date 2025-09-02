@@ -17,3 +17,5 @@ services:
         value: "true"
       - key: APPSMITH_EMAIL_ENABLED
         value: "true"
+      - key: APPSMITH_RATE_LIMIT
+        value: "disabled"
